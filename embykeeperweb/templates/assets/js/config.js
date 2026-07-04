@@ -12,12 +12,27 @@ window.addEventListener('DOMContentLoaded', function() {
     editor.on('change',function(inst){
         statusMsgBadge.classList.add("d-none");
     });
+
+    const basePrefix = document.documentElement.getAttribute('data-prefix') || '';
+
     document.getElementById('save-btn').addEventListener('click', function() {
         statusMsg.innerText = '正在保存中';
         statusMsgBadge.classList.remove("d-none");
-        axios.post('/config/save', {"config": editor.getDoc().getValue()})
+        axios.post(basePrefix + '/config/save', {"config": editor.getDoc().getValue()})
             .then(function(response) {
-                document.getElementById('modal-data').textContent = response.data;
+                const modalBody = document.querySelector('.modal-body');
+                if (response.data) {
+                    document.getElementById('modal-data').textContent = response.data;
+                    modalBody.children[0].style.display = 'none';  // Hide Telegram message
+                    modalBody.children[1].style.display = 'block'; // Show hr
+                    modalBody.children[2].style.display = 'block'; // Show env var message
+                    modalBody.children[3].style.display = 'block'; // Show copy box
+                } else {
+                    modalBody.children[0].style.display = 'block'; // Show Telegram message
+                    modalBody.children[1].style.display = 'none';  // Hide hr
+                    modalBody.children[2].style.display = 'none';  // Hide env var message
+                    modalBody.children[3].style.display = 'none';  // Hide copy box
+                }
                 var saveModal = new bootstrap.Modal(document.getElementById('saveModal'));
                 saveModal.show();
                 statusMsgBadge.classList.add("d-none");
@@ -30,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('example-btn').addEventListener('click', function() {
         statusMsg.innerText = '正在加载示例配置';
         statusMsgBadge.classList.remove("d-none");
-        axios.get('/config/example')
+        axios.get(basePrefix + '/config/example')
             .then(function(response) {
                 editor.getDoc().setValue(response.data);
             })
@@ -39,7 +54,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 statusMsg.innerText = '加载示例配置失败, 请检查您的网络并重试';
             });
     });
-    axios.get('/config/current')
+    axios.get(basePrefix + '/config/current')
         .then(function (response) {
             var statusIcon = document.getElementById("status-icon");
             statusIcon.style.backgroundColor = "green";

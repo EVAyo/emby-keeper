@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "embykeeper"
-version = "6.6.4"
+version = "7.6.1"
 authors = [
     {name = "jackzzs", email = "jackzzs@outlook.com"},
 ]
@@ -29,8 +29,11 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
-requires-python = ">=3.8,<3.11"
+requires-python = ">=3.8"
 dynamic = ["dependencies"]
 
 [project.urls]
@@ -43,6 +46,7 @@ content-type = "text/markdown"
 [project.scripts]
 embykeeper = "embykeeper.cli:app"
 embykeeperweb = "embykeeperweb.app:cli"
+embykeeperapi = "embykeeperapi.app:cli"
 
 [tool.setuptools]
 zip-safe = false
@@ -55,3 +59,11 @@ find = {namespaces = false}
 
 [tool.black]
 line-length = 110
+extend-exclude = '''
+# A regex preceded with ^/ will apply only to files and directories
+# in the root of the project.
+(
+  ^/config.example.toml
+  # | .*.toml
+)
+'''

@@ -49,7 +49,7 @@ Embykeeper 支持 Docker 或 PyPI 安装 (Linux / Windows), 也支持云部署, 
 
 若您没有服务器, 您可以通过免费托管平台进行部署, 点击下方按钮开始部署:
 
-[![Deploy to Huggingface Space](https://github.com/emby-keeper/emby-keeper/raw/main/images/deploy-to-hf.svg)](https://huggingface.co/spaces/embykeeper/embykeeper?duplicate=true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Tutorial](https://github.com/emby-keeper/emby-keeper/raw/main/images/hf-tutorial.svg)](https://blog.zetx.tech/2024/05/19/embykeeper-hf-tutorial/)
+[![Deploy to Huggingface Space](https://github.com/emby-keeper/emby-keeper/raw/main/images/deploy-to-hf.svg)](https://huggingface.co/spaces/ekuser/ek?duplicate=true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Tutorial](https://github.com/emby-keeper/emby-keeper/raw/main/images/hf-tutorial.svg)](https://blog.zetx.tech/2024/05/19/embykeeper-hf-tutorial/)
 
 若您有服务器, 我们推荐使用 [Docker 部署](https://emby-keeper.github.io/guide/Linux-Docker-部署):
 
@@ -78,38 +78,30 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
   <!-- #region checkiner-sites -->
 
   - 终点站 (`terminus`): [频道](https://t.me/embypub) [群组](https://t.me/EmbyPublic) [机器人](https://t.me/EmbyPublicBot)
-  - Pornemby (`pornemby`): [频道](https://t.me/pornembyservice) [群组](https://t.me/Pornemby) [机器人](https://t.me/Porn_Emby_Bot)
   - Nebula (`nebula`): [频道](https://t.me/Nebula_Emby) [群组](https://t.me/NebulaEmbyUser) [机器人](https://t.me/Nebula_Account_bot)
-  - Apop Pro (`apoppro`): [频道](https://t.me/ApopCloud_Channel) [群组](https://t.me/apopcloud) [机器人](https://t.me/apopembypro_bot)
   - 飞跃彩虹 (`feiyue`): [频道](https://t.me/fyemby) [群组](https://t.me/feiyueemby) [机器人](https://t.me/FeiyueEmby_bot)
   - PandaTV: [频道](https://t.me/PandaTV_Emby_Channel)
     - 自动签到 (`pandatv`): [机器人](https://t.me/PandaTV_Emby_Bot)
     - 每 14 天自动群里发送签到 (`pandatv_group`): [群组](https://t.me/PandaTV_Emby_Group)
   - Peach (`peach`): [机器人](https://t.me/peach_emby_bot)
-  - 魔法Emby (`magic`): [频道](https://t.me/Magic_EmbyChannel) [群组](https://t.me/Magicemby) [机器人](https://t.me/Magic_EmbyBot)
   - 开心服 (`happy`): [频道](https://t.me/hhappyemby) [群组](https://t.me/Happyembyyds) [机器人](https://t.me/happy_sign_bot)
   - MICU (`micu`): [频道](http://t.me/+_PcX8rALVA80NTU1) [群组](http://t.me/+tW5vUYJROcE2ZTA1) [机器人](https://t.me/micu_user_bot)
   - 叔服Emby (`shufu`): [群组](http://t.me/+4eq37Ip8ayRhNDI9) [机器人](https://t.me/dashu660_bot)
-  - 天南小筑 (`tiannan`): [频道](http://t.me/Nanflix) [群组](http://t.me/+kDBdjwtZwudhYWE1) [机器人](https://t.me/Nanflix_bot)
   - 天南小筑 US (`tiannanus`): [频道](http://t.me/Nanflix) [群组](http://t.me/+kDBdjwtZwudhYWE1) [机器人](https://t.me/US_nan_bot)
-  - MJJ (`mjj`): [频道](https://t.me/YH_Emby) [群组](https://t.me/mjj_emby_Chat) [机器人](https://t.me/mjjemby_uesr_bot)
   - Pilipili (`pilipili`): [频道](https://t.me/PiliPiliTv) [群组](http://t.me/PiliPiliTv) [机器人](https://t.me/PiliPiliUltraTv_bot)
   - CC 公益 (`cc`): [频道](https://t.me/CcEmby) [群组](https://t.me/Embycc) [机器人](https://t.me/EmbyCc_bot)
   - 卡戎 (`charon`): [频道](https://t.me/CharonTV) [群组](https://t.me/CharonTV_Talk) [机器人](https://t.me/CharonTV_Bot)
   - 未响 (`future`): [频道](https://t.me/FutureEcho_Notice) [群组](https://t.me/FutureEcho_Chat) [机器人](https://t.me/lotayu_bot)
   - AWA 影视服 (`awatv`): [频道](https://t.me/awa_tv) [群组](https://t.me/awatv_chat) [机器人](https://t.me/awatv3_bot)
-  - Lily (`lily`): [频道](https://t.me/lily_yaya) [群组](https://t.me/lilydeyaa) [机器人](https://t.me/lilyembybot)
-  - 见手青 (`jsq`): [频道](https://t.me/jsq_channel) [群组](https://t.me/jsq_group) [机器人](https://t.me/jsq_ac_mg_bot)
+  - 见手青 (`jsq`): [频道](https://t.me/jsq_channel) [群组](https://t.me/jsq_group) [机器人](https://t.me/jsq_gy_bot)
   - DVFilm (`dvfilm`): [频道](https://t.me/dvfilmupdating) [机器人](https://t.me/DVfilm_user_bot)
-  - 冰镇西瓜 (`watermelon`): [频道](https://t.me/WatermelonAirport) [群组](https://t.me/WatermelonAirportGroup) [机器人](https://t.me/XiguaEmbyBot)
   - Lyrebird (`lyrebird`): [频道](https://t.me/lyrebirdchannel) [群组](https://t.me/lyrebirdchat) [机器人](https://t.me/Lyrebird_bot)
   - 非越助手 (`sfcju`): [频道](https://t.me/sfcj_org) [群组](https://t.me/sfcj_chat) [机器人](https://t.me/sfcju_Bot)
   - Yomo (`yomo`): [频道](https://t.me/yomoemby_notice) [群组](https://t.me/yomoemby) [机器人](https://t.me/yomoemby_bot)
-  - Raismusic (`raismusic`): [频道](https://t.me/raisemby_channel) [群组1](https://t.me/raismusic_group) [群组2](https://t.me/Raisembyg) [机器人](https://t.me/raismusicbot)
   - AIVBI (`aivbi`): [频道](https://t.me/plus_emby) [群组](https://t.me/plusemby) [机器人](https://t.me/AIVBIbot)
   - Alpha 海外服 (`alpha`): [频道](https://t.me/AlphaTVOverseaChannel) [群组](https://t.me/AlphaTVOverseaGroup) [机器人](https://t.me/AlphaTVOverseaBoss_bot)
   - 月饼 (`mooncake`): [频道](https://t.me/Mooncake_notify) [群组](https://t.me/Mooncake_Emby) [机器人](https://t.me/Moonkkbot)
-  - Plumber (`plumber`): [频道](http://t.me/PlumberEmby) [群组](http://t.me/+S060mYNUi1xlODlh) [机器人](https://t.me/Plumberembybot)
+  - Plumber (`plumber`): [频道](http://t.me/PlumberEmby) [群组](http://t.me/+S060mYNUi1xlODlh) [机器人](https://t.me/Luuuigi_bot)
   - 飞跃地平线 (`feiyuedpx`): [频道](https://t.me/dpxpindao) [群组](https://t.me/+vHiy1TBnnjNiOWU1) [机器人](https://t.me/feiyueDPX_bot)
   - Levilde Luminia (`levilde`): [频道](https://t.me/+X5jJKAnbkl8wNWNl) [群组](https://t.me/+LzAmejEBy-I4N2E1) [机器人](https://t.me/Levilde_Luminia_Bot)
   - 收束世界线 (`worldline`): [机器人](https://t.me/WorldLineEmby_bot)
@@ -118,12 +110,33 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
   - 探花 (`tanhua`): [频道](https://t.me/tanhua_tv2024) [群组](https://t.me/tanhuatv2025) [机器人](https://t.me/TanhuaTvBot)
   - iKun 音乐服 (`ikunmusic`): [频道](https://t.me/Asukacute) [群组](https://t.me/ikunvv) [机器人](https://t.me/iikun_bot)
   - HKA (`hka`): [群组](https://t.me/hkaemby) [机器人](https://t.me/hkaemby_bot)
-  - AuroraMedia (`aurora`): [频道](https://t.me/AuroraMedia2) [机器人](https://t.me/AuroraMedia1_bot)
   - SaturDay.Lite (`saturday`): [频道](https://t.me/saturday_lite_channel) [群组](https://t.me/SaturDay_Lite) [机器人](https://t.me/saturday_lite_bot)
-  - 鹅 (`zm`): [机器人](https://t.me/ZXCHSJSHbot)
   - 起点站: [群组](https://t.me/tdckemby)
     - 新机器人 (`tdck_new`): [机器人](https://t.me/StartTdckBot)
     - 旧机器人 (`tdck`) [机器人](https://t.me/tdck_emby_create_bot)
+  - 惊蛰 (`jingzhe`): [频道](https://t.me/jz_emby) [群组](https://t.me/jingzhe_EMBY) [机器人](https://t.me/JingzheProbot)
+  - 墨云阁 (`moyunge`): [频道](https://t.me/q98e1VZocwxkZDc1) [群组](https://t.me/mobaishishuaige) [机器人](https://t.me/MoYunGeBoss_bot)
+  - 电子书库: [频道](https://t.me/bookhsulife) [群组](https://t.me/libhsulife)
+    - Emby 机器人签到 (`epub`): [机器人](https://t.me/akilecloud_bot)
+    - 群组内签到 (`epub_group`): [群组](https://t.me/libhsulife) [机器人](https://t.me/zhruonanbot)
+    - 群组内发送八条随机诗句消息 (`epub_group_chat`): [群组](https://t.me/libhsulife)
+  - Kiku (`kiku`): [频道](https://t.me/KikuEmbyNotice) [群组](https://t.me/KikuEmbyChat) [机器人](https://t.me/kikuemby_bot)
+  - 叶子 (`yezi`): [频道](https://t.me/yezi_emby) [群组](https://t.me/yeziemby) [机器人](https://t.me/yeziemby_bot)
+  - 叶子高码 (`yezigm`): [频道](https://t.me/yezi_emby) [群组](https://t.me/yeziemby) [机器人](https://t.me/yezigm_bot)
+  - Ask (`ask`): [频道](https://t.me/ask_uni) [群组](https://t.me/Ask_Universal) [机器人](https://t.me/askUniversal_bot)
+  - Youno (`youno`): [频道](http://t.me/+jRxdcDjxgpViNDll) [群组](https://t.me/YounosEmby) [机器人](https://t.me/YounoEmbyAgain_bot)
+  - Lemby (`lemby`): [频道](https://t.me/Lemby_Channel) [群组](https://t.me/Lemby_Group) [机器人](https://t.me/LembyPremium_BOT)
+  - 南瓜音乐 (`nangua`): [频道](https://t.me/nanguadd) [群组](https://t.me/nanguade) [机器人](https://t.me/nanguaemby_bot)
+  - 西瓜 (`xigua`): [频道](https://t.me/ChilledWatermelon) [群组](https://t.me/ChilledMelonGroup) [机器人](https://t.me/XiguaEmbyBot)
+  - 飞了个喵 (`meow`): [频道](https://t.me/+UhFqaQIVs8A2ZDRl) [群组](https://t.me/gymeowfly) [机器人](https://t.me/gymeowfly_bot)
+  - 青梅映画 (`qingmei`): [频道](http://t.me/qingmeiyinghuaemby01) [群组](http://t.me/qingmeiyinghuaemby) [机器人](https://t.me/qingmeiemby_bot)
+  - Star : [频道](https://t.me/star_emby) [群组](https://t.me/star_emby_chat)
+    - 可爱的机器人签到 (`star1`): [机器人](https://t.me/star_emby_bot)
+    - 不可爱的机器人签到 (`star2`): [机器人](https://t.me/star_emby2_bot)
+  - 入机 (`ruji`): [频道](https://t.me/rjMediatz) [群组](https://t.me/rjMedai) [机器人](https://t.me/ljembyfukh_bot)
+  - 入境 (`rujing`): [群组](https://t.me/rjfemby) [机器人](https://t.me/rujingModie_bot)
+  - 比比助手 (`bibi`): [频道](http://t.me/bbembychannel) [群组](http://t.me/+1ahL4frEF_5lZmNl) [机器人](https://t.me/BBFreeFilm_bot)
+
 
   <!-- #endregion checkiner-sites -->
 
@@ -132,6 +145,9 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
   - 测试中新签到器 (默认禁用, 请参考[教程文档](https://emby-keeper.github.io/guide/配置文件#service-子项)启用):
     <!-- #region checkiner-beta-sites -->
 
+    - PornFans: [频道](https://t.me/PornFansChannel) [群组](https://t.me/PornFans_Chat) [机器人](https://t.me/Porn_Emby_Bot)
+      - 签到群自动发言打卡 (`pornfans_group`): [签到群](https://t.me/PornFans_Chat)
+      - 游戏群自动发言打卡 (`pornfans_game_group`): [游戏群](https://t.me/embytestflight)
     - Temby (`temby`): [频道](https://t.me/tembychannel) [群组](https://t.me/tembygroup) [机器人](https://t.me/HiEmbyBot)
     - Temby 测试服 (`temby_beta`): [群组](https://t.me/tembybeta) [机器人](https://t.me/Temby_Bot)
     - Ciji (`ciji`): [机器人](https://t.me/MM_nastool_bot)
@@ -142,6 +158,15 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
   - 关服, 无响应, 或已停用签到功能 (默认禁用, 请参考[教程文档](https://emby-keeper.github.io/guide/配置文件#service-子项)启用):
     <!-- #region checkiner-ignored-sites -->
 
+    - July (`july`): ~~[群组](https://t.me/July_emby) [机器人](https://t.me/NASTOOL7_bot)~~
+    - Lily (`lily`): ~~[频道](https://t.me/lily_yaya) [群组](https://t.me/lilydeyaa) [机器人](https://t.me/lilyembybot)~~
+    - MJJ (`mjj`): ~~[频道](https://t.me/YH_Emby) [群组](https://t.me/mjj_emby_Chat) [机器人](https://t.me/mjjemby_uesr_bot)~~
+    - DPeak (`dpeak`): ~~[群组](https://t.me/EMBY_DPeak) [机器人](https://t.me/emby_dpeak_bot)~~
+    - 鹅服 (`zm`): ~~[机器人](https://t.me/ZXCHSJSHbot)~~
+    - AuroraMedia (`aurora`): ~~[频道](https://t.me/AuroraMedia2) [机器人](https://t.me/AuroraMedia1_bot)~~
+    - Raismusic (`raismusic`): ~~[频道](https://t.me/raisemby_channel) [群组1](https://t.me/raismusic_group) [群组2](https://t.me/Raisembyg) [机器人](https://t.me/raismusicbot)~~
+    - 天南小筑 (`tiannan`): ~~[频道](http://t.me/Nanflix) [群组](http://t.me/+kDBdjwtZwudhYWE1) [机器人](https://t.me/Nanflix_bot)~~
+    - 魔法Emby (`magic`): ~~[频道](https://t.me/Magic_EmbyChannel) [群组](https://t.me/Magicemby) [机器人](https://t.me/Magic_EmbyBot)~~
     - 卷毛鼠 (`jms`): ~~[频道](https://t.me/CurlyMouse) [群组](https://t.me/Curly_Mouse) [机器人](https://t.me/jmsembybot)~~
     - Akuai (`akuai`): ~~[频道](https://t.me/Akuaitzpibgdao) [群组](https://t.me/ikuaiemby) [机器人](https://t.me/joulilibot)~~
     - 垃圾影音 (`ljyy`): ~~[群组](https://t.me/+3sP2A-fgeXg0ZmY1) [机器人](https://t.me/zckllflbot)~~
@@ -152,7 +177,8 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
     - 剧狗 (`judog`): ~~[频道](https://t.me/Mulgoreemby) [机器人](https://t.me/mulgorebot)~~
     - Heisi (`heisi`): ~~[频道](https://t.me/HeisiEm) [群组](https://t.me/HeisiYi) [机器人](https://t.me/HeisiheiBot)~~
     - 阿甘正传 (`theend`): ~~[群组](https://t.me/+5vRfDeGmOKNiMzU1) [机器人](https://t.me/theendemby_bot)~~
-    - Apop 压测服 (`apop`): ~~[频道](https://t.me/ApopCloud_Channel) [群组](https://t.me/apopcloud) [机器人](https://t.me/apopcloudemby_bot)~~
+    - Apop (`apop`): ~~[频道](https://t.me/ApopCloud_Channel) [群组](https://t.me/apopcloud) [机器人](https://t.me/apopcloudemby_bot)~~
+    - Apop Pro (`apoppro`): ~~[频道](https://t.me/ApopCloud_Channel) [群组](https://t.me/apopcloud) [机器人](https://t.me/apopembypro_bot)~~
     - Akile: [群组](https://t.me/akileChat)
       - 群组内签到 (`akile_group`): ~~[群组](https://t.me/akileChat) [机器人](https://t.me/akilecloud_bot)~~
       - 机器人签到 (`akile`): ~~[机器人](https://t.me/akilecloud_bot)~~
@@ -163,6 +189,7 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
   - 其他非 Emby 相关 (默认禁用, 请参考[教程文档](https://emby-keeper.github.io/guide/配置文件#service-子项)启用):
     <!-- #region checkiner-other-sites -->
 
+    - HDHive (`hdhive`): [群组](https://t.me/alypzyhzq) [机器人](https://t.me/HDHiveBot)
     - 搜书神器 (`sssq`): [机器人](https://t.me/sosdbot?start=fromid_6489896414)
     - 纸片 DDoS (`zhipian`): [频道](https://t.me/PaperBotnet) [机器人](https://t.me/zhipianbot?start=2zbx04e)
     - 情报局社工库 (`infsgk`): [机器人](https://t.me/qbjSGKzhuquebot?start=NjQ4OTg5NjQxNA==)
@@ -197,7 +224,7 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
     - 叮当猫社工库 (`dingdangsgk`): [机器人](https://t.me/DingDangCats_Bot?start=d9bb127efc6127d1)
     - 魔神社工库 (`moshensgk`): [机器人](https://t.me/moshensgk_bot?start=NjQ4OTg5NjQxNA==)
     - Bost 社工库 (`bostsgk`): [机器人](https://t.me/BOST_SGK_BOT?start=6489896414)
-    - Shzi (`shzi`): [机器人](https://t.me/aishuazibot?start=QvSBSqCG)
+    - Oixel (`oixel`): [机器人](https://t.me/oixel_bot?start=QvSBSqCG)
     - 飞机工具箱 (`feiji`): [机器人](https://t.me/fjtool_bot?start=6489896414C44)
     - 鸟哥轰炸 (`niaoge`): [机器人](https://t.me/nb3344bot?start=6489896414)
     - Bytevirt (`bytevirt_group`): [群组](https://t.me/bytevirtchat)
@@ -208,17 +235,18 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
 - **Telegram 自动监控信息**
   <!-- #region monitor-sites -->
 
-  - Pornemby:
-    - 问题回答 (`pornemby_answer`): [群组](https://t.me/Pornemby)
-    - 科举考试 (`pornemby_exam`): [群组](https://t.me/Pornemby)
-    - 自动抢注 (`pornemby_register`): [群组](https://t.me/Pornemby)
-    - 自动抢红包雨 (`pornemby_dragon_rain`): [群组](https://t.me/Pornemby)
-    - 自动翻倍 (`pornemby_double`): [群组](https://t.me/Pornemby)
-    - 无 HP 自动停止自动水群 (`pornemby_nohp`): [群组](https://t.me/Pornemby)
-    - 风险时期自动停止 (`pornemby_alert`): [群组](https://t.me/Pornemby)
+  - PornFans:
+    - 问题回答 (`pornfans_answer`): [群组](https://t.me/embytestflight)
+    - 科举考试 (`pornfans_exam`): [群组](https://t.me/embytestflight)
+    - 自动抢注 (`pornfans_register`): [群组](https://t.me/embytestflight)
+    - 自动抢红包雨 (`pornfans_dragon_rain`): [群组](https://t.me/embytestflight)
+    - 自动翻倍 (`pornfans_double`): [群组](https://t.me/embytestflight)
+    - 无 HP 自动停止自动水群 (`pornfans_nohp`): [群组](https://t.me/embytestflight)
+    - 风险时期自动停止 (`pornfans_alert`): [群组](https://t.me/embytestflight)
   - 不给看 抢邀请码 (`bgk`): [群组](https://t.me/Ephemeralemby) [机器人](https://t.me/UnknownEmbyBot)
   - 叔服 抢邀请码 (`shufu`): [群组](http://t.me/+4eq37Ip8ayRhNDI9) [机器人](https://t.me/dashu660_bot)
   - Misty 开注自动注册 (`misty`): [频道](https://t.me/FreeEmbyChannel) [群组](https://t.me/FreeEmby) [机器人](https://t.me/EmbyMistyBot)
+  - 蜗壳 开注自动注册 (`misty`): [频道](https://t.me/WalkingAudio) [群组](https://t.me/Walking_Chat) [机器人](https://t.me/Readsnail_bot)
 
   <!-- #endregion monitor-sites -->
   - 测试中的站点 (默认禁用, 请参考[教程文档](https://emby-keeper.github.io/guide/配置文件#service-子项)启用):
@@ -249,9 +277,9 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
 
     - Marmot (`marmot`) (周末早晚签到): [频道](https://t.me/Marmot_Emby_Channel) 群组 (非公开) [机器人](https://t.me/Marmot_Emby_Account_BOT)
 
-    - Pornemby (`pornemby`) (打怪兽水群): [频道](https://t.me/pornembyservice) [群组](https://t.me/Pornemby) [机器人](https://t.me/PronembyTGBot2_bot)
+    - PornFans (`pornfans`) (打怪兽水群): [频道](https://t.me/PornFansChannel) [群组](https://t.me/embytestflight) [机器人](https://t.me/Porn_Emby_Bot)
 
-    - Pornemby 智能化回答 (`smart_pornemby`) (打怪兽水群, AI 会考虑上下文和群组语言风格进行回答): [频道](https://t.me/pornembyservice) [群组](https://t.me/Pornemby) [机器人](https://t.me/PronembyTGBot2_bot)
+    - PornFans 智能化回答 (`smart_pornfans`) (打怪兽水群, AI 会考虑上下文和群组语言风格进行回答): [频道](https://t.me/PornFansChannel) [群组](https://t.me/embytestflight) [机器人](https://t.me/Porn_Emby_Bot)
 
     <!-- #endregion messager-beta-sites -->
   - 关服或无响应 (默认禁用, 请参考[教程文档](https://emby-keeper.github.io/guide/配置文件#service-子项)启用):

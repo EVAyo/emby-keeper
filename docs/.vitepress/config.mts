@@ -1,8 +1,4 @@
 import { defineConfig } from 'vitepress';
-import {
-  pagefindPlugin,
-  chineseSearchOptimize,
-} from 'vitepress-plugin-pagefind';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -131,6 +127,7 @@ export default defineConfig({
               { text: '🎬 自动保活', link: '/guide/功能说明-自动保活' },
               { text: '📅 每日签到', link: '/guide/功能说明-每日签到' },
               { text: '👀 群组监控', link: '/guide/功能说明-群组监控' },
+              { text: '🕒 定时抢注', link: '/guide/功能说明-定时抢注' },
               { text: '💬 自动水群', link: '/guide/功能说明-自动水群' },
               { text: '📝 考核辅助', link: '/guide/功能说明-考核辅助' },
               { text: '🔔 日志推送', link: '/guide/功能说明-日志推送' },

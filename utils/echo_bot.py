@@ -1,16 +1,17 @@
 import asyncio
 from pathlib import Path
-from textwrap import dedent
 
 from loguru import logger
-import tomli as tomllib
 from pyrogram import filters
 from pyrogram.handlers import MessageHandler
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import ParseMode
 
-from embykeeper.utils import AsyncTyper
-from embykeeper.telechecker.tele import Client, API_KEY
+from embykeeper.cli import AsyncTyper
+from embykeeper.telegram.pyrogram import Client
+from embykeeper.telegram.session import API_ID, API_HASH
+from embykeeper.config import config
+from embykeeper import var
 
 app = AsyncTyper()
 
@@ -26,7 +27,7 @@ async def start(client: Client, message: Message):
     # 检查是否有命令参数
     command_text = message.text.split(None, 1)
     if len(command_text) > 1:
-        # 有命令参数，解析按钮
+        # 有命令参数, 解析按钮
         text = command_text[1]
         if "#" in text:
             # 按##分割成不同行
@@ -56,7 +57,7 @@ async def start(client: Client, message: Message):
 
     # 发送消息
     if reply_msg.photo:
-        # 如果是图片，复制图片并添加caption
+        # 如果是图片, 复制图片并添加caption
         await client.send_photo(
             message.chat.id,
             reply_msg.photo.file_id,
@@ -65,32 +66,29 @@ async def start(client: Client, message: Message):
             parse_mode=ParseMode.MARKDOWN,
         )
     else:
-        # 如果是纯文本，发送文本消息
+        # 如果是纯文本, 发送文本消息
         await client.send_message(
             message.chat.id, reply_msg.text, reply_markup=buttons, parse_mode=ParseMode.MARKDOWN
         )
 
 
 @app.async_command()
-async def main(config: Path):
-    with open(config, "rb") as f:
-        config = tomllib.load(f)
-    for k in API_KEY.values():
-        api_id = k["api_id"]
-        api_hash = k["api_hash"]
+async def main(config_file: Path):
+    var.debug = 2
+    await config.reload_conf(config_file)
     bot = Client(
         name="test_bot",
-        bot_token=config["bot"]["token"],
-        proxy=config.get("proxy", None),
+        bot_token=config.bot.token,
+        proxy=config.proxy.model_dump(),
         workdir=Path(__file__).parent,
-        api_id=api_id,
-        api_hash=api_hash,
+        api_id=API_ID,
+        api_hash=API_HASH,
         in_memory=True,
     )
     async with bot:
         await bot.add_handler(MessageHandler(start, filters.command("start")))
         logger.info(f"Started listening for commands: @{bot.me.username}.")
-        await asyncio.Event().wait()
+        await asyncio.Future()
 
 
 if __name__ == "__main__":

@@ -7,11 +7,11 @@
 ::: warning 注意
 您需要先进行过 [通过 Docker 部署](/guide/Linux-Docker-部署) 才能通过 Docker Compose 部署.
 
-这是由于首次登录会命令行请求两步验证码, 登录成功后会生成 `.login` 后缀的文件, 随后才能部署为 `docker-compose` 服务.
+这是由于首次登录会命令行请求两步验证码, 登录成功后会将凭据存入 `cache.json` 文件, 随后才能部署为 `docker-compose` 服务.
 :::
 
 ::: info 提示
-如果你还没有安装 Docker Compose，下面是其安装步骤:
+如果你还没有安装 Docker Compose, 下面是其安装步骤:
 
 ```bash
 curl -L "https://github.com/docker/compose/releases/download/v2.32.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -32,7 +32,7 @@ docker run -v $(pwd)/embykeeper:/app --rm -it --net=host embykeeper/embykeeper -
 .
 ├── embykeeper
 │   ├── config.toml
-│   └── +xxxxx.login
+│   ├── cache.json
 └── docker-compose.yml
 ```
 
@@ -99,7 +99,7 @@ docker-compose up -d
 
 ## 自动版本更新
 
-您可以使用 [watchtower](https://github.com/containrrr/watchtower) 来自动更新 Embykeeper 的 Docker 镜像。
+您可以使用 [watchtower](https://github.com/containrrr/watchtower) 来自动更新 Embykeeper 的 Docker 镜像.
 
 在您的 `docker-compose.yml` 中添加 watchtower 服务：
 
@@ -130,7 +130,7 @@ services:
 - 发现新版本时自动拉取镜像并重启容器
 
 ::: tip 提示
-您可以通过修改 `--interval` 参数来调整检查更新的时间间隔（单位：秒）。
+您可以通过修改 `--interval` 参数来调整检查更新的时间间隔（单位：秒）.
 :::
 
 ## 使用其他版本

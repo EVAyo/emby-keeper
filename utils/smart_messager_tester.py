@@ -12,9 +12,10 @@ import openai
 from pyrogram.types import Message
 
 from embykeeper import __name__ as __product__
-from embykeeper.telechecker.messager.smart_pornemby import SmartPornembyMessager
-from embykeeper.telechecker.tele import ClientsSession
-from embykeeper.utils import AsyncTyper, get_proxy_str, truncate_str
+from embykeeper.telegram.messager.smart_pornfans import SmartPornfansMessager
+from embykeeper.telegram.session import ClientsSession
+from embykeeper.cli import AsyncTyper, get_proxy_str, truncate_str
+from embykeeper.config import config
 
 
 app = AsyncTyper()
@@ -25,25 +26,23 @@ SKIP = 5
 
 
 @app.async_command()
-async def main(config: Path):
-    with open(config, "rb") as f:
-        config = tomllib.load(f)
-    proxy_dict = config.get("proxy", None)
-    proxy = get_proxy_str(proxy_dict)
+async def main(config_file: Path):
+    await config.reload_conf(config_file)
+    proxy = get_proxy_str(config.proxy)
     aiclient = openai.AsyncOpenAI(
-        api_key=config["openai"]["api_key"],
-        base_url=config["openai"]["base_url"],
+        api_key=config.openai.api_key,
+        base_url=config.openai.base_url,
         http_client=httpx.AsyncClient(proxy=proxy),
     )
-    async with ClientsSession(config["telegram"][:1], proxy=proxy_dict) as clients:
-        async for tg in clients:
-            messager = SmartPornembyMessager(
+    async with ClientsSession(config.telegram.account[:1]) as clients:
+        async for a, tg in clients:
+            messager = SmartPornfansMessager(
                 {}, config={}, me=tg.me, basedir=Path(user_data_dir(__product__))
             )
-            messages_file = await messager.get_spec_path(messager.default_messages)
+            messages_file = await messager.get_spec_path(messager.style_message_list)
             with open(messages_file, "r") as f:
                 data = yaml.safe_load(f)
-                messager.example_messages = data.get("messages", [])[:100]
+                messager.style_messages = data.get("messages", [])[:100]
             messages: List[Message] = []
             async for message in tg.get_chat_history(messager.chat_name):
                 messages.append(message)
@@ -62,8 +61,8 @@ async def main(config: Path):
                             )
                         spec = " ".join(spec)
                         ctx = truncate_str(text, 180)
-                        if msg.from_user and msg.from_user.name:
-                            ctx = f"{msg.from_user.name}说: {ctx}"
+                        if msg.from_user and msg.from_user.full_name:
+                            ctx = f"{msg.from_user.full_name}说: {ctx}"
                         if spec:
                             ctx += f" ({spec})"
                         context.append(ctx)
@@ -72,16 +71,16 @@ async def main(config: Path):
                     use_time = last_msg.date + timedelta(minutes=2)
 
                     prompt = "我需要你在一个群聊中进行合理的回复."
-                    if messager.example_messages:
+                    if messager.style_messages:
                         prompt += "\n该群聊的聊天风格类似于以下条目:\n\n"
-                        for msg in messager.example_messages:
+                        for msg in messager.style_messages:
                             prompt += f"- {msg}\n"
                     if context:
                         prompt += "\n该群聊最近的几条消息及其特征为 (最早到晚):\n\n"
                         for ctx in list(reversed(context)):
                             prompt += f"- {ctx}\n"
                     prompt += "\n其他信息:\n\n"
-                    prompt += f"- 我的用户名: {tg.me.name}\n"
+                    prompt += f"- 我的用户名: {tg.me.full_name}\n"
                     prompt += f'- 当前时间: {use_time.strftime("%Y-%m-%d %H:%M:%S")}\n'
                     prompt += (
                         "\n请根据以上的信息, 给出一个合理的回复, 要求:\n"
